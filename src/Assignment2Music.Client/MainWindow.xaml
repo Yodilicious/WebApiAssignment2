@@ -5,39 +5,39 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Assignment2Music.Client"
         mc:Ignorable="d"
-        Title="MainWindow" Height="639" Width="795">
+        Title="Music API by Jodi Visser" Height="639" Width="795">
     <Grid>
         <DockPanel LastChildFill="True" Margin="0">
             <StackPanel>
-                <Button Width="160" Height="30" x:Name="CmdArtistGetAll" Content="Artist - Get All" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistGetAll_Click" />
-                <Button Width="160" Height="30" x:Name="CmdArtistGetOne" Content="Artist - Get One" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistGetOne_Click" />
-                <Button Width="160" Height="30" x:Name="CmdArtistInsert" Content="Artist - Get Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistInsert_Click" />
-                <Button Width="160" Height="30" x:Name="CmdArtistUpdate" Content="Artist - Get Update" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistUpdate_Click" />
-                <Button Width="160" Height="30" x:Name="CmdArtistDelete" Content="Artist - Get Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistDelete_Click" />
+                <Button Width="160" Height="30" x:Name="CmdArtistGetAll" Content="Artist - Get All" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistGetAll_Click" Background="#FFD17777" />
+                <Button Width="160" Height="30" x:Name="CmdArtistGetOne" Content="Artist - Get One" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistGetOne_Click" Background="#FFD17777" />
+                <Button Width="160" Height="30" x:Name="CmdArtistInsert" Content="Artist - Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistInsert_Click" Background="#FFD17777" />
+                <Button Width="160" Height="30" x:Name="CmdArtistUpdate" Content="Artist - Update" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistUpdate_Click" Background="#FFD17777" />
+                <Button Width="160" Height="30" x:Name="CmdArtistDelete" Content="Artist - Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdArtistDelete_Click" Background="#FFD17777" />
+
+                <Button Width="160" Height="30" x:Name="CmdGenreGetAll" Content="Genre - Get All" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreGetAll_Click" Background="#FF6AB1E2" />
+                <Button Width="160" Height="30" x:Name="CmdGenreGetOne" Content="Genre - Get One" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreGetOne_Click" Background="#FF6AB1E2" />
+                <Button Width="160" Height="30" x:Name="CmdGenreInsert" Content="Genre - Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreInsert_Click" Background="#FF6AB1E2" />
+                <Button Width="160" Height="30" x:Name="CmdGenreUpdate" Content="Genre - Update" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreUpdate_Click" Background="#FF6AB1E2" />
+                <Button Width="160" Height="30" x:Name="CmdGenreDelete" Content="Genre - Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreDelete_Click" Background="#FF6AB1E2" />
                 
-                <Button Width="160" Height="30" x:Name="CmdTrackGetAll" Content="Track - Get All" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackGetAll_Click" />
-                <Button Width="160" Height="30" x:Name="CmdTrackGetOne" Content="Track - Get One" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackGetOne_Click" />
-                <Button Width="160" Height="30" x:Name="CmdTrackInsert" Content="Track - Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackInsert_Click" />
-                <Button Width="160" Height="30" x:Name="CmdTrackUpdate" Content="Track - Update" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackUpdate_Click" />
-                <Button Width="160" Height="30" x:Name="CmdTrackDelete" Content="Track - Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackDelete_Click" />
+                <Button Width="160" Height="30" x:Name="CmdTrackGetAll" Content="Track - Get All" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackGetAll_Click" Background="#FFEC96FF" />
+                <Button Width="160" Height="30" x:Name="CmdTrackGetOne" Content="Track - Get One" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackGetOne_Click" Background="#FFEC96FF" />
+                <Button Width="160" Height="30" x:Name="CmdTrackInsert" Content="Track - Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackInsert_Click" Background="#FFEC96FF" />
+                <Button Width="160" Height="30" x:Name="CmdTrackUpdate" Content="Track - Update" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackUpdate_Click" Background="#FFEC96FF" />
+                <Button Width="160" Height="30" x:Name="CmdTrackDelete" Content="Track - Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdTrackDelete_Click" Background="#FFEC96FF" />
 
-                <Button Width="160" Height="30" x:Name="CmdGenreGetAll" Content="Genre - Get All" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreGetAll_Click" />
-                <Button Width="160" Height="30" x:Name="CmdGenreGetOne" Content="Genre - Get One" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreGetOne_Click" />
-                <Button Width="160" Height="30" x:Name="CmdGenreInsert" Content="Genre - Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreInsert_Click" />
-                <Button Width="160" Height="30" x:Name="CmdGenreUpdate" Content="Genre - Update" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreUpdate_Click" />
-                <Button Width="160" Height="30" x:Name="CmdGenreDelete" Content="Genre - Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdGenreDelete_Click" />
-
-                <Button Width="160" Height="30" x:Name="CmdReviewGetAll" Content="Review - Get All" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewGetAll_Click" />
-                <Button Width="160" Height="30" x:Name="CmdReviewGetAllForTrack" Content="Review - Get All For Track" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewGetAllForTrack_Click" />
-                <Button Width="160" Height="30" x:Name="CmdReviewGetOne" Content="Review - Get One" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewGetOne_Click" />
-                <Button Width="160" Height="30" x:Name="CmdReviewInsert" Content="Review - Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewInsert_Click" />
-                <Button Width="160" Height="30" x:Name="CmdReviewUpdate" Content="Review - Update" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewUpdate_Click" />
-                <Button Width="160" Height="30" x:Name="CmdReviewDelete" Content="Review - Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewDelete_Click" />
+                <Button Width="160" Height="30" x:Name="CmdReviewGetAll" Content="Review - Get All" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewGetAll_Click" Background="#FF87EE95" />
+                <Button Width="160" Height="30" x:Name="CmdReviewGetAllForTrack" Content="Review - Get All For Track" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewGetAllForTrack_Click" Background="#FF87EE95" />
+                <Button Width="160" Height="30" x:Name="CmdReviewGetOne" Content="Review - Get One" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewGetOne_Click" Background="#FF87EE95" />
+                <Button Width="160" Height="30" x:Name="CmdReviewInsert" Content="Review - Insert" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewInsert_Click" Background="#FF87EE95" />
+                <Button Width="160" Height="30" x:Name="CmdReviewUpdate" Content="Review - Update" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewUpdate_Click" Background="#FF87EE95" />
+                <Button Width="160" Height="30" x:Name="CmdReviewDelete" Content="Review - Delete" HorizontalAlignment="Left" VerticalAlignment="Top" Click="CmdReviewDelete_Click" Background="#FF87EE95" />
             </StackPanel>
-            <RichTextBox x:Name="RtbResult" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" DockPanel.Dock="Right" FontFamily="Courier New" FontSize="14">
+            <RichTextBox x:Name="RtbResult" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" DockPanel.Dock="Right" FontFamily="Courier New" FontSize="16">
                 <FlowDocument>
                     <Paragraph>
-                        <Run Text="RichTextBox"/>
+                        <Run Text="Please start with Insert and Insert at least two records. Thank you and have a great day!"/>
                     </Paragraph>
                 </FlowDocument>
             </RichTextBox>

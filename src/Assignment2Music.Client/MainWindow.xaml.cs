@@ -50,9 +50,9 @@
 
         private void CmdArtistUpdate_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.PutRequest("v1/artist/3", new ArtistViewModel
+            var result = RestClientHelper.PutRequest("v1/artist/1", new ArtistViewModel
             {
-                RecordId = 3,
+                RecordId = 1,
                 ArtistName = "Test Artist",
                 FirstName = "Jonny",
                 LastName = "Six",
@@ -66,7 +66,7 @@
 
         private void CmdArtistDelete_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.DeleteRequest("v1/artist/3");
+            var result = RestClientHelper.DeleteRequest("v1/artist/1");
 
             this.RtbResult.Document.Blocks.Clear();
             this.RtbResult.Document.Blocks.Add(new Paragraph(new Run(result)));
@@ -94,8 +94,8 @@
             {
                 RecordId = 0,
                 ArtistName = "Test Artist",
-                ArtistId = 1,
-                GenreId = 1,
+                ArtistId = 2,
+                GenreId = 2,
                 GenreName = "Pop",
                 PostedOn = DateTime.Now,
                 TrackLength = 201,
@@ -108,12 +108,12 @@
 
         private void CmdTrackUpdate_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.PutRequest("v1/artist/3", new TrackViewModel
+            var result = RestClientHelper.PutRequest("v1/track/1", new TrackViewModel
             {
-                RecordId = 0,
+                RecordId = 1,
                 ArtistName = "",
-                ArtistId = 1,
-                GenreId = 1,
+                ArtistId = 2,
+                GenreId = 2,
                 GenreName = "",
                 PostedOn = DateTime.Now,
                 TrackLength = 201,
@@ -126,7 +126,7 @@
 
         private void CmdTrackDelete_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.DeleteRequest("v1/track/3");
+            var result = RestClientHelper.DeleteRequest("v1/track/1");
 
             this.RtbResult.Document.Blocks.Clear();
             this.RtbResult.Document.Blocks.Add(new Paragraph(new Run(result)));
@@ -150,7 +150,7 @@
 
         private void CmdGenreInsert_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.PostRequest("v1/track", new GenreViewModel
+            var result = RestClientHelper.PostRequest("v1/genre", new GenreViewModel
             {
                 RecordId = 0,
                 Name = "Cool Track Insert",
@@ -163,9 +163,9 @@
 
         private void CmdGenreUpdate_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.PutRequest("v1/track", new GenreViewModel
+            var result = RestClientHelper.PutRequest("v1/genre/1", new GenreViewModel
             {
-                RecordId = 0,
+                RecordId = 1,
                 Name = "Cool Track Update",
                 Description = "Cool Track Update Description"
             });
@@ -176,7 +176,7 @@
 
         private void CmdGenreDelete_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.DeleteRequest("v1/genre/3");
+            var result = RestClientHelper.DeleteRequest("v1/genre/1");
 
             this.RtbResult.Document.Blocks.Clear();
             this.RtbResult.Document.Blocks.Add(new Paragraph(new Run(result)));
@@ -192,7 +192,7 @@
 
         private void CmdReviewGetAllForTrack_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.GetRequest("v1/reviews/track/1");
+            var result = RestClientHelper.GetRequest("v1/reviews/track/2");
 
             this.RtbResult.Document.Blocks.Clear();
             this.RtbResult.Document.Blocks.Add(new Paragraph(new Run(result)));
@@ -208,14 +208,14 @@
 
         private void CmdReviewInsert_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.PutRequest("v1/review", new ReviewViewModel
+            var result = RestClientHelper.PostRequest("v1/review", new ReviewViewModel
             {
                 RecordId = 0,
-                ArtistId = 1,
+                ArtistId = 2,
                 ArtistName = "",
                 ReviewedOn = DateTime.Now,
                 ReviewText = "Insert Review Text",
-                TrackId = 1,
+                TrackId = 2,
                 TrackName = ""
             });
 
@@ -225,14 +225,14 @@
 
         private void CmdReviewUpdate_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.PutRequest("v1/review", new ReviewViewModel
+            var result = RestClientHelper.PutRequest("v1/review/1", new ReviewViewModel
             {
-                RecordId = 0,
-                ArtistId = 1,
+                RecordId = 1,
+                ArtistId = 2,
                 ArtistName = "",
                 ReviewedOn = DateTime.Now,
                 ReviewText = "Update Review Text",
-                TrackId = 1,
+                TrackId = 2,
                 TrackName = ""
             });
 
@@ -242,7 +242,7 @@
 
         private void CmdReviewDelete_Click(object sender, RoutedEventArgs e)
         {
-            var result = RestClientHelper.DeleteRequest("v1/review/3");
+            var result = RestClientHelper.DeleteRequest("v1/review/1");
 
             this.RtbResult.Document.Blocks.Clear();
             this.RtbResult.Document.Blocks.Add(new Paragraph(new Run(result)));
